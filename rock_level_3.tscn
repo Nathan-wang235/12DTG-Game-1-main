@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cqemhawlf1vsi"]
+
+[ext_resource type="Script" uid="uid://bxjb3hmwrqk1a" path="res://rock_level_3.gd" id="1_c880m"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_pum8m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q40fu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_283b8"]
+radius = 13.0
+
+[node name="rock_level3" type="RigidBody2D" unique_id=720103899]
+script = ExtResource("1_c880m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=321168108]
+position = Vector2(9.536743e-07, 1.9073486e-06)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("1_pum8m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=601644600]
+shape = SubResource("CircleShape2D_q40fu")
+
+[node name="Rock_area_level3" type="Area2D" parent="." unique_id=1150233450]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock_area_level3" unique_id=1407326013]
+shape = SubResource("CircleShape2D_283b8")
+
+[connection signal="area_entered" from="Rock_area_level3" to="." method="_on_rock_area_level_3_area_entered"]
+[connection signal="area_exited" from="Rock_area_level3" to="." method="_on_rock_area_level_3_area_exited"]
