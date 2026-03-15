@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://00022uvso0c2" path="res://dash_cooldown_time.gd" id="5_2orkt"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="6_aicyk"]
 [ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="7_8b0r0"]
+[ext_resource type="Script" uid="uid://dmdqnydalb5k0" path="res://portal_level_1.gd" id="8_km5ld"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
 size = Vector2(94, 76)
@@ -555,6 +556,10 @@ sources/0 = SubResource("TileSetAtlasSource_0e48y")
 radius = 60.0
 height = 124.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i2t4f"]
+radius = 31.0
+height = 316.0
+
 [node name="level" type="Node2D" unique_id=1884338669]
 position = Vector2(10, 253)
 
@@ -617,24 +622,33 @@ tile_set = SubResource("TileSet_epypp")
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1525298544]
 
-[node name="Checkpoint1" type="Area2D" parent="Checkpoints" unique_id=1864978674]
+[node name="CP1-1" type="Area2D" parent="Checkpoints" unique_id=1864978674]
 position = Vector2(4766, -140)
 script = ExtResource("7_8b0r0")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint1" unique_id=862185875]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/CP1-1" unique_id=862185875]
 shape = SubResource("CapsuleShape2D_kdubu")
 
-[node name="Checkpoint2" type="Area2D" parent="Checkpoints" unique_id=1144041452]
+[node name="Cp1-2" type="Area2D" parent="Checkpoints" unique_id=1144041452]
 position = Vector2(5467, 338)
 script = ExtResource("7_8b0r0")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint2" unique_id=993165584]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Cp1-2" unique_id=993165584]
 shape = SubResource("CapsuleShape2D_kdubu")
+
+[node name="Portal_level1" type="Area2D" parent="Checkpoints" unique_id=2083699754]
+position = Vector2(14750, -207)
+script = ExtResource("8_km5ld")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Portal_level1" unique_id=534080576]
+shape = SubResource("CapsuleShape2D_i2t4f")
 
 [connection signal="tree_entered" from="player" to="player" method="_on_tree_entered"]
 [connection signal="timeout" from="player/Dash_effect_time" to="player" method="_on_dash_effect_time_timeout"]
 [connection signal="timeout" from="player/Dash_cooldown_time" to="player" method="_on_dash_cooldown_time_timeout"]
-[connection signal="body_entered" from="Checkpoints/Checkpoint1" to="Checkpoints/Checkpoint1" method="_on_body_entered"]
-[connection signal="body_entered" from="Checkpoints/Checkpoint2" to="Checkpoints/Checkpoint2" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoints/CP1-1" to="Checkpoints/CP1-1" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Cp1-2" to="Checkpoints/Cp1-2" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Portal_level1" to="Checkpoints/Portal_level1" method="_on_body_entered"]

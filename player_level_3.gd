@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var rock_scene : PackedScene
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-var respawn = Vector2(400, 280)
+var respawn = Vector2(200, -80)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
