@@ -4,14 +4,9 @@
 [ext_resource type="Script" uid="uid://fb1qdloaotr2" path="res://player_level_3.gd" id="1_16pka"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_16pka"]
 [ext_resource type="PackedScene" uid="uid://cqemhawlf1vsi" path="res://rock_level_3.tscn" id="4_j8bo8"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://area_2d.tscn" id="5_1jdk1"]
-=======
-[ext_resource type="Texture2D" uid="uid://drcu6nhbek4yq" path="res://kenney_new-platformer-pack-1.1/Sprites/Tiles/Double/terrain_snow_cloud_middle.png" id="5_1jdk1"]
 [ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="5_6p2dc"]
-[ext_resource type="PackedScene" uid="uid://cgpkhlsq5ek5s" path="res://机关🫠_level_3.tscn" id="7_7ds5r"]
+[ext_resource type="PackedScene" path="res://机关🫠_level_3.tscn" id="7_7ds5r"]
 [ext_resource type="Texture2D" uid="uid://bwehvyc5lhi86" path="res://obstacle_level3.png" id="8_liaj6"]
->>>>>>> e5cd2005f9be072164c85032aefa921d4b352280
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8bo8"]
 size = Vector2(61, 61)
@@ -404,8 +399,6 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1jdk1")
 
-<<<<<<< HEAD
-=======
 [sub_resource type="Curve2D" id="Curve2D_6p2dc"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 256.49072, -333.38025, 0, 0, 0, 0, 256.2422, 219.90173, 0, 0, 0, 0, 250.7583, -274.9218, 0, 0, 0, 0, 256, -334)
@@ -418,7 +411,6 @@ size = Vector2(128, 47)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b60u5"]
 size = Vector2(121, 212.5)
 
->>>>>>> e5cd2005f9be072164c85032aefa921d4b352280
 [node name="level 3" type="Node2D" unique_id=1653356197]
 
 [node name="Player_level3" type="CharacterBody2D" parent="." unique_id=1049333804]
@@ -449,16 +441,6 @@ tile_set = SubResource("TileSet_6p2dc")
 [node name="rock_level3" parent="." unique_id=611775948 instance=ExtResource("4_j8bo8")]
 position = Vector2(198, 47)
 
-<<<<<<< HEAD
-[node name="Area2D" parent="." unique_id=638974961 instance=ExtResource("5_1jdk1")]
-position = Vector2(4134, -143)
-
-[node name="Area2D2" parent="." unique_id=1781884690 instance=ExtResource("5_1jdk1")]
-position = Vector2(6564, -277)
-
-[node name="Area2D3" parent="." unique_id=1097738363 instance=ExtResource("5_1jdk1")]
-position = Vector2(5985, -267)
-=======
 [node name="Area2D" type="Area2D" parent="." unique_id=501944883]
 position = Vector2(4605, -458)
 script = ExtResource("5_6p2dc")
@@ -471,15 +453,7 @@ curve = SubResource("Curve2D_6p2dc")
 [node name="PathFollow2D" type="PathFollow2D" parent="Area2D/Path2D" unique_id=1912819696]
 position = Vector2(256.49072, -333.38025)
 rotation = 1.5712456
->>>>>>> e5cd2005f9be072164c85032aefa921d4b352280
 
-[node name="Area2D4" parent="." unique_id=256708698 instance=ExtResource("5_1jdk1")]
-position = Vector2(8646, -262)
-
-<<<<<<< HEAD
-[node name="Area2D5" parent="." unique_id=419530891 instance=ExtResource("5_1jdk1")]
-position = Vector2(10681, -277)
-=======
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=35998788]
 position = Vector2(-263, 354)
 shape = SubResource("RectangleShape2D_fmu3g")
@@ -501,4 +475,3 @@ texture = ExtResource("8_liaj6")
 position = Vector2(2367.4998, -22.25)
 scale = Vector2(1.06, 1.06)
 shape = SubResource("RectangleShape2D_b60u5")
->>>>>>> e5cd2005f9be072164c85032aefa921d4b352280
