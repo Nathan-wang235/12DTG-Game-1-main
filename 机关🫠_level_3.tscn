@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cgpkhlsq5ek5s"]
+
+[ext_resource type="Script" uid="uid://c1lf2cn7ugq6x" path="res://机关_level_3.gd" id="1_xcn53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qbo4"]
+
+[node name="trigger_level3" type="Area2D" unique_id=1614180312]
+script = ExtResource("1_xcn53")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=352231391]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_8qbo4")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
