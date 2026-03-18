@@ -22,6 +22,7 @@ curve = SubResource("Curve2D_6p2dc")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=215831040]
 position = Vector2(258, -336)
 rotation = 1.5885249
+rotates = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=2093176779]
 position = Vector2(-6.009091, -0.39711797)
@@ -29,6 +30,7 @@ rotation = -1.5882496
 scale = Vector2(0.99215734, 0.48436442)
 texture = ExtResource("2_5rgpn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1169724911]
-position = Vector2(258, -347.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D" unique_id=1169724911]
+position = Vector2(-11.498199, 0.20387268)
+rotation = -1.5885249
 shape = SubResource("RectangleShape2D_fmu3g")
