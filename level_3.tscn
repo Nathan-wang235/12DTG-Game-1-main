@@ -4,8 +4,7 @@
 [ext_resource type="Script" uid="uid://fb1qdloaotr2" path="res://player_level_3.gd" id="1_16pka"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_16pka"]
 [ext_resource type="PackedScene" uid="uid://cqemhawlf1vsi" path="res://rock_level_3.tscn" id="4_j8bo8"]
-[ext_resource type="Texture2D" uid="uid://drcu6nhbek4yq" path="res://kenney_new-platformer-pack-1.1/Sprites/Tiles/Double/terrain_snow_cloud_middle.png" id="5_1jdk1"]
-[ext_resource type="Script" uid="uid://cupr5pn7ovfq5" path="res://obstacle_level3.gd" id="5_6p2dc"]
+[ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://area_2d.tscn" id="5_1jdk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8bo8"]
 size = Vector2(61, 61)
@@ -398,15 +397,6 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1jdk1")
 
-[sub_resource type="Curve2D" id="Curve2D_6p2dc"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 258, -336, 0, 0, 0, 0, 253, -54, 0, 0, 0, 0, 256, -334)
-}
-point_count = 3
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmu3g"]
-size = Vector2(128, 47)
-
 [node name="level 3" type="Node2D" unique_id=1653356197]
 
 [node name="Player_level3" type="CharacterBody2D" parent="." unique_id=1049333804]
@@ -436,24 +426,17 @@ tile_set = SubResource("TileSet_6p2dc")
 [node name="rock_level3" parent="." unique_id=611775948 instance=ExtResource("4_j8bo8")]
 position = Vector2(198, 47)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=501944883]
-position = Vector2(-100, 176)
-script = ExtResource("5_6p2dc")
-metadata/_edit_group_ = true
+[node name="Area2D" parent="." unique_id=638974961 instance=ExtResource("5_1jdk1")]
+position = Vector2(4134, -143)
 
-[node name="Path2D" type="Path2D" parent="Area2D" unique_id=915470372]
-curve = SubResource("Curve2D_6p2dc")
+[node name="Area2D2" parent="." unique_id=1781884690 instance=ExtResource("5_1jdk1")]
+position = Vector2(6564, -277)
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Area2D/Path2D" unique_id=1912819696]
-position = Vector2(258, -336)
-rotation = 1.5885249
+[node name="Area2D3" parent="." unique_id=1097738363 instance=ExtResource("5_1jdk1")]
+position = Vector2(5985, -267)
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D/Path2D/PathFollow2D" unique_id=1793100095]
-position = Vector2(-6.009091, -0.39711797)
-rotation = -1.5882496
-scale = Vector2(0.99215734, 0.48436442)
-texture = ExtResource("5_1jdk1")
+[node name="Area2D4" parent="." unique_id=256708698 instance=ExtResource("5_1jdk1")]
+position = Vector2(8646, -262)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=35998788]
-position = Vector2(258, -347.5)
-shape = SubResource("RectangleShape2D_fmu3g")
+[node name="Area2D5" parent="." unique_id=419530891 instance=ExtResource("5_1jdk1")]
+position = Vector2(10681, -277)
