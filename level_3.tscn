@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_16pka"]
 [ext_resource type="PackedScene" uid="uid://cqemhawlf1vsi" path="res://rock_level_3.tscn" id="4_j8bo8"]
 [ext_resource type="Texture2D" uid="uid://drcu6nhbek4yq" path="res://kenney_new-platformer-pack-1.1/Sprites/Tiles/Double/terrain_snow_cloud_middle.png" id="5_1jdk1"]
-[ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="5_6p2dc"]
+[ext_resource type="Script" uid="uid://cupr5pn7ovfq5" path="res://obstacle_level3.gd" id="5_6p2dc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8bo8"]
 size = Vector2(61, 61)
