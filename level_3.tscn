@@ -4,9 +4,8 @@
 [ext_resource type="Script" uid="uid://fb1qdloaotr2" path="res://player_level_3.gd" id="1_16pka"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_16pka"]
 [ext_resource type="PackedScene" uid="uid://cqemhawlf1vsi" path="res://rock_level_3.tscn" id="4_j8bo8"]
-[ext_resource type="Texture2D" uid="uid://drcu6nhbek4yq" path="res://kenney_new-platformer-pack-1.1/Sprites/Tiles/Double/terrain_snow_cloud_middle.png" id="5_1jdk1"]
 [ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="5_6p2dc"]
-[ext_resource type="PackedScene" uid="uid://cgpkhlsq5ek5s" path="res://机关🫠_level_3.tscn" id="7_7ds5r"]
+[ext_resource type="PackedScene" path="res://机关🫠_level_3.tscn" id="7_7ds5r"]
 [ext_resource type="Texture2D" uid="uid://bwehvyc5lhi86" path="res://obstacle_level3.png" id="8_liaj6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8bo8"]
@@ -454,6 +453,7 @@ curve = SubResource("Curve2D_6p2dc")
 [node name="PathFollow2D" type="PathFollow2D" parent="Elevator_level3/Path2D" unique_id=1912819696]
 position = Vector2(256.49072, -333.38025)
 rotation = 1.5712456
+
 
 [node name="Sprite2D" type="Sprite2D" parent="Elevator_level3/Path2D/PathFollow2D" unique_id=1793100095]
 position = Vector2(-6.009091, -0.39711797)
