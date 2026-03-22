@@ -25,9 +25,9 @@ rotation = 1.5885249
 rotates = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=2093176779]
-position = Vector2(-6.009091, -0.39711797)
+position = Vector2(-12.838612, -0.27790862)
 rotation = -1.5882496
-scale = Vector2(0.99215734, 0.48436442)
+scale = Vector2(0.99215734, 0.3776369)
 texture = ExtResource("2_5rgpn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D" unique_id=1169724911]
