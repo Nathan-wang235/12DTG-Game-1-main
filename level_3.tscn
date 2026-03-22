@@ -442,26 +442,38 @@ tile_set = SubResource("TileSet_6p2dc")
 [node name="rock_level3" parent="." unique_id=611775948 instance=ExtResource("4_j8bo8")]
 position = Vector2(198, 47)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=501944883]
+[node name="Elevator_level3" type="Area2D" parent="." unique_id=501944883]
 position = Vector2(4605, -458)
 script = ExtResource("5_6p2dc")
 metadata/_edit_group_ = true
 
-[node name="Path2D" type="Path2D" parent="Area2D" unique_id=915470372]
+[node name="Path2D" type="Path2D" parent="Elevator_level3" unique_id=915470372]
 rotation = 3.1415927
 curve = SubResource("Curve2D_6p2dc")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Area2D/Path2D" unique_id=1912819696]
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator_level3/Path2D" unique_id=1912819696]
 position = Vector2(256.49072, -333.38025)
 rotation = 1.5712456
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=35998788]
+
+[node name="Sprite2D" type="Sprite2D" parent="Elevator_level3/Path2D/PathFollow2D" unique_id=1793100095]
+position = Vector2(-6.009091, -0.39711797)
+rotation = -1.5882496
+scale = Vector2(0.99215734, 0.48436442)
+texture = ExtResource("5_1jdk1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator_level3" unique_id=35998788]
 position = Vector2(-263, 354)
 shape = SubResource("RectangleShape2D_fmu3g")
 
 [node name="trigger_level3" parent="." unique_id=1614180312 node_paths=PackedStringArray("wall_node") instance=ExtResource("7_7ds5r")]
 position = Vector2(2275, -158)
 wall_node = NodePath("../Wall_level3")
+
+[node name="trigger_level4" parent="." unique_id=1927757678 node_paths=PackedStringArray("wall_node", "elevator") instance=ExtResource("7_7ds5r")]
+position = Vector2(4774, -171)
+wall_node = NodePath("../Wall_level3")
+elevator = NodePath("../Elevator_level3")
 
 [node name="Wall_level3" type="StaticBody2D" parent="." unique_id=1452819222]
 position = Vector2(0, -1)
@@ -477,5 +489,7 @@ position = Vector2(2367.4998, -22.25)
 scale = Vector2(1.06, 1.06)
 shape = SubResource("RectangleShape2D_b60u5")
 
+
 [node name="Area2D2" parent="." unique_id=638974961 instance=ExtResource("8_7ds5r")]
 position = Vector2(1910, 251)
+
