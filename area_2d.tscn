@@ -10,7 +10,7 @@ _data = {
 point_count = 3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmu3g"]
-size = Vector2(128, 47)
+size = Vector2(47, 17.999939)
 
 [node name="Area2D" type="Area2D" unique_id=638974961]
 script = ExtResource("1_dl81w")
@@ -25,12 +25,14 @@ rotation = 1.5885249
 rotates = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=2093176779]
-position = Vector2(-12.838612, -0.27790862)
+position = Vector2(-18.972418, 0.5269867)
 rotation = -1.5882496
-scale = Vector2(0.99215734, 0.3776369)
+scale = Vector2(0.36248595, 0.16662632)
 texture = ExtResource("2_5rgpn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D" unique_id=1169724911]
-position = Vector2(-11.498199, 0.20387268)
-rotation = -1.5885249
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Sprite2D" unique_id=1169724911]
+position = Vector2(-0.8552246, -12.130127)
+rotation = -0.0005990558
+scale = Vector2(2.7587278, 6.001452)
+skew = 0.0004724264
 shape = SubResource("RectangleShape2D_fmu3g")
