@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dx1jy6udh44xa"]
+
+[ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="1_peadv"]
+[ext_resource type="Texture2D" uid="uid://dff7dv6gjxyxs" path="res://kenney 2/obstacle2_level3.png" id="2_luyev"]
+[ext_resource type="Script" uid="uid://3d7jehux0v8y" path="res://path_follow_2d2.gd" id="2_ogicu"]
+
+[sub_resource type="Curve2D" id="Curve2D_6p2dc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 322.66827, -364.81268, 0, 0, 0, 0, 321.66827, -786.70953, 0, 0, 0, 0, 322.66797, -364.81284)
+}
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmu3g"]
+size = Vector2(232.81046, 50.152515)
+
+[node name="Area2D" type="Area2D" unique_id=2058096302]
+position = Vector2(349, -258)
+script = ExtResource("1_peadv")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1032789015]
+position = Vector2(-15.329, 52.168)
+rotation = 3.1415927
+scale = Vector2(1.0000093, 0.8438081)
+curve = SubResource("Curve2D_6p2dc")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=2139580886]
+position = Vector2(322.66827, -364.81268)
+rotation = 1.5684268
+rotates = false
+script = ExtResource("2_ogicu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Path2D/PathFollow2D" unique_id=80512729]
+position = Vector2(-15.092524, 87.0542)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/StaticBody2D" unique_id=128179858]
+position = Vector2(14.096748, -87.0607)
+rotation = 1.5703471
+scale = Vector2(1.0000002, 1.0000004)
+shape = SubResource("RectangleShape2D_fmu3g")
+debug_color = Color(0, 0.60343975, 0.6817677, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/StaticBody2D" unique_id=172103918]
+position = Vector2(15.092671, -87.054504)
+rotation = 1.5703471
+scale = Vector2(0.85530907, 0.8243937)
+texture = ExtResource("2_luyev")

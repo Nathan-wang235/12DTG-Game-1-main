@@ -40,6 +40,7 @@ func activate_buff():
 		return
 	else:
 		is_active = true
+		$Dashsound.play()
 		SPEED *= speed_multiplier
 		print("Speed is increased sucessful")
 		effect_timer.start()
