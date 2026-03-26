@@ -2,14 +2,12 @@
 
 [ext_resource type="Script" uid="uid://fb1qdloaotr2" path="res://player_level_3.gd" id="1_16pka"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_16pka"]
-
 [ext_resource type="Texture2D" uid="uid://bca1npq6q2lmp" path="res://Characters/Idle.png" id="3_m8gss"]
 [ext_resource type="AudioStream" uid="uid://8rtlak62j6ok" path="res://Music/Jumpsound.mp3" id="4_b60u5"]
-
 [ext_resource type="PackedScene" uid="uid://cqemhawlf1vsi" path="res://rock_level_3.tscn" id="4_j8bo8"]
 [ext_resource type="Texture2D" uid="uid://cx2hb5kk1740w" path="res://Characters/Jump.png" id="4_wnq0t"]
-[ext_resource type="PackedScene" uid="uid://dx1jy6udh44xa" path="res://elevator.tscn" id="5_6p2dc"]
-[ext_resource type="PackedScene" path="res://机关🫠_level_3.tscn" id="7_7ds5r"]
+[ext_resource type="PackedScene" path="res://elevator.tscn" id="5_6p2dc"]
+[ext_resource type="PackedScene" uid="uid://cgpkhlsq5ek5s" path="res://机关🫠_level_3.tscn" id="7_7ds5r"]
 [ext_resource type="Texture2D" uid="uid://cuhjf0krgpksl" path="res://kenney 2/obstacle_level3.png" id="7_fmu3g"]
 [ext_resource type="Script" path="res://elv2_level_3.gd" id="8_833wy"]
 [ext_resource type="Script" path="res://elv3_level_3.gd" id="9_ghrvs"]
@@ -20,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dff7dv6gjxyxs" path="res://kenney 2/obstacle2_level3.png" id="14_g0tlw"]
 [ext_resource type="Script" path="res://path_follow_2d.gd" id="14_keufu"]
 [ext_resource type="AudioStream" uid="uid://dhe18ai7nyonl" path="res://Music/background music.mp3" id="17_joegk"]
-[ext_resource type="Script" uid="uid://xcowhf2i6s8y" path="res://cp_3_1new.gd" id="19_wnq0t"]
+[ext_resource type="Script" path="res://cp_3_1new.gd" id="19_wnq0t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ra6nl"]
 atlas = ExtResource("3_m8gss")
@@ -710,9 +708,10 @@ height = 124.0
 [node name="level 3" type="Node2D" unique_id=1653356197]
 
 [node name="Player3" type="CharacterBody2D" parent="." unique_id=1049333804]
-position = Vector2(5424, -724)
+position = Vector2(-30, 4)
 script = ExtResource("1_16pka")
 rock_scene = ExtResource("4_j8bo8")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player3" unique_id=1764939131]
 texture_filter = 1
@@ -723,7 +722,7 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player3" unique_id=521521642]
-position = Vector2(-14.8125, 22.25)
+position = Vector2(-11, 20)
 shape = SubResource("RectangleShape2D_j8bo8")
 
 [node name="Camera2D" type="Camera2D" parent="Player3" unique_id=747471765]
@@ -731,7 +730,6 @@ zoom = Vector2(0.9, 0.9)
 
 [node name="ThrowPoint" type="Node2D" parent="Player3" unique_id=341655876]
 position = Vector2(6, 32)
-
 
 [node name="Jumpsound" type="AudioStreamPlayer" parent="Player3" unique_id=1262415734]
 stream = ExtResource("4_b60u5")
@@ -770,12 +768,12 @@ script = ExtResource("8_833wy")
 elv2_level3_speed = 0
 
 [node name="elv3_level3" parent="Triggers and elevators" unique_id=1167382293 instance=ExtResource("5_6p2dc")]
-position = Vector2(6872, -1221)
+position = Vector2(6850, -1546)
 script = ExtResource("9_ghrvs")
 elv3_level3_speed = 0
 
 [node name="elv4_level3" parent="Triggers and elevators" unique_id=1311568470 instance=ExtResource("5_6p2dc")]
-position = Vector2(7374, -1226)
+position = Vector2(7323, -1542)
 script = ExtResource("10_jvy75")
 elv4_level3_speed = 0
 
