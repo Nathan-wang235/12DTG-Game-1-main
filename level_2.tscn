@@ -622,6 +622,16 @@ texture_filter = 1
 position = Vector2(4105, 642)
 texture = ExtResource("1_7dov7")
 
+[node name="Parallax2D3" type="Parallax2D" parent="Background" unique_id=1854805451]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-17, 0)
+repeat_times = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D3" unique_id=660162304]
+texture_filter = 1
+position = Vector2(4111, -1199)
+texture = ExtResource("1_7dov7")
+
 [node name="Player2" type="CharacterBody2D" parent="." unique_id=1050817989]
 position = Vector2(519, 388)
 script = ExtResource("1_xdadj")
