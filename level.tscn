@@ -574,6 +574,7 @@ position_smoothing_enabled = true
 [node name="Jumpsound" type="AudioStreamPlayer" parent="player" unique_id=468578707]
 stream = ExtResource("6_8cye3")
 
+
 [node name="Dashsound" type="AudioStreamPlayer" parent="player" unique_id=990265214]
 stream = ExtResource("7_2orkt")
 
