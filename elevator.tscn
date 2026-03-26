@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="1_peadv"]
 [ext_resource type="Texture2D" uid="uid://dff7dv6gjxyxs" path="res://kenney 2/obstacle2_level3.png" id="2_luyev"]
-[ext_resource type="Script" uid="uid://3d7jehux0v8y" path="res://path_follow_2d2.gd" id="2_ogicu"]
+[ext_resource type="Script" path="res://path_follow_2d2.gd" id="2_ogicu"]
 
 [sub_resource type="Curve2D" id="Curve2D_6p2dc"]
 _data = {
@@ -11,7 +11,7 @@ _data = {
 point_count = 3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmu3g"]
-size = Vector2(232.81046, 50.152515)
+size = Vector2(232.00687, 52.34475)
 
 [node name="Area2D" type="Area2D" unique_id=2058096302]
 position = Vector2(349, -258)
@@ -24,23 +24,25 @@ scale = Vector2(1.0000093, 0.8438081)
 curve = SubResource("Curve2D_6p2dc")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=2139580886]
-position = Vector2(322.66827, -364.81268)
+position = Vector2(321.66797, -778.41394)
 rotation = 1.5684268
 rotates = false
 script = ExtResource("2_ogicu")
+metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Path2D/PathFollow2D" unique_id=80512729]
 position = Vector2(-15.092524, 87.0542)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/StaticBody2D" unique_id=128179858]
-position = Vector2(14.096748, -87.0607)
+position = Vector2(15.09238, -87.05389)
 rotation = 1.5703471
-scale = Vector2(1.0000002, 1.0000004)
+scale = Vector2(1.0000006, 1.0000004)
 shape = SubResource("RectangleShape2D_fmu3g")
 debug_color = Color(0, 0.60343975, 0.6817677, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/StaticBody2D" unique_id=172103918]
-position = Vector2(15.092671, -87.054504)
+position = Vector2(15.09238, -87.05387)
 rotation = 1.5703471
 scale = Vector2(0.85530907, 0.8243937)
 texture = ExtResource("2_luyev")
