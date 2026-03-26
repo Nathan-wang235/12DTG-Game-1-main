@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://541hc3ql0scw"]
+[gd_scene format=4 uid="uid://dnfvaeh4cchls"]
 
 [ext_resource type="Script" uid="uid://fb1qdloaotr2" path="res://player_level_3.gd" id="1_16pka"]
 [ext_resource type="Texture2D" uid="uid://btgox44mvlb1r" path="res://8bit-pixel-graphic-blue-sky-background-with-clouds-vector.jpg" id="1_ra6nl"]
@@ -10,14 +10,14 @@
 [ext_resource type="PackedScene" path="res://elevator.tscn" id="5_6p2dc"]
 [ext_resource type="PackedScene" uid="uid://cgpkhlsq5ek5s" path="res://机关🫠_level_3.tscn" id="7_7ds5r"]
 [ext_resource type="Texture2D" uid="uid://cuhjf0krgpksl" path="res://kenney 2/obstacle_level3.png" id="7_fmu3g"]
-[ext_resource type="Script" path="res://elv2_level_3.gd" id="8_833wy"]
-[ext_resource type="Script" path="res://elv3_level_3.gd" id="9_ghrvs"]
-[ext_resource type="Script" path="res://elv4_level_3.gd" id="10_jvy75"]
-[ext_resource type="Script" path="res://elv5_level_3.gd" id="11_g0tlw"]
-[ext_resource type="Script" path="res://elv6_level_3.gd" id="12_keufu"]
-[ext_resource type="Script" path="res://elevator_1_level_3.gd" id="13_jvy75"]
+[ext_resource type="Script" uid="uid://dv62kgm044fe8" path="res://elv2_level_3.gd" id="8_833wy"]
+[ext_resource type="Script" uid="uid://cafpfs886y5si" path="res://elv3_level_3.gd" id="9_ghrvs"]
+[ext_resource type="Script" uid="uid://cfl5rfb22pppo" path="res://elv4_level_3.gd" id="10_jvy75"]
+[ext_resource type="Script" uid="uid://bf05n04s3ss4i" path="res://elv5_level_3.gd" id="11_g0tlw"]
+[ext_resource type="Script" uid="uid://o5fjc4313f2c" path="res://elv6_level_3.gd" id="12_keufu"]
+[ext_resource type="Script" uid="uid://cb228xngu43ea" path="res://elevator_1_level_3.gd" id="13_jvy75"]
 [ext_resource type="Texture2D" uid="uid://dff7dv6gjxyxs" path="res://kenney 2/obstacle2_level3.png" id="14_g0tlw"]
-[ext_resource type="Script" path="res://path_follow_2d.gd" id="14_keufu"]
+[ext_resource type="Script" uid="uid://qnk8x8si10y5" path="res://path_follow_2d.gd" id="14_keufu"]
 [ext_resource type="AudioStream" uid="uid://dhe18ai7nyonl" path="res://Music/background music.mp3" id="17_joegk"]
 [ext_resource type="Script" path="res://cp_3_1new.gd" id="19_wnq0t"]
 
@@ -813,12 +813,12 @@ script = ExtResource("10_jvy75")
 elv4_level3_speed = 0
 
 [node name="elv5_level3" parent="Triggers and elevators" unique_id=747373364 instance=ExtResource("5_6p2dc")]
-position = Vector2(9152, -1117)
+position = Vector2(9202, -1129)
 script = ExtResource("11_g0tlw")
 elv5_level3_speed = 0
 
 [node name="elv6_level3" parent="Triggers and elevators" unique_id=1950393435 instance=ExtResource("5_6p2dc")]
-position = Vector2(11217, -1122)
+position = Vector2(11220, -1165)
 script = ExtResource("12_keufu")
 elv6_level3_speed = 0
 

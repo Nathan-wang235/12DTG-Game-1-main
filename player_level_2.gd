@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 var SPEED := 300
-var JUMP_VELOCITY := -550
-var wall_jump_force := 550
+var JUMP_VELOCITY := -480
+var wall_jump_force := 750
 var respawn = Vector2(400, 280)
 var wall_jump_used := false
 

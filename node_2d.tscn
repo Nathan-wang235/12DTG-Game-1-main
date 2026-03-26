@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="6_kdubu"]
 [ext_resource type="AudioStream" uid="uid://y5ddv0skjaxa" path="res://Music/Dashsound.mp3" id="7_ir8iy"]
 [ext_resource type="AudioStream" uid="uid://dhe18ai7nyonl" path="res://Music/background music.mp3" id="8_rj586"]
+[ext_resource type="Script" uid="uid://bhtr2fx6ab0gp" path="res://win.gd" id="11_hqns4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
 size = Vector2(94, 76)
@@ -520,6 +521,8 @@ sources/0 = SubResource("TileSetAtlasSource_0e48y")
 radius = 60.0
 height = 124.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0ka3"]
+
 [node name="level" type="Node2D" unique_id=1884338669]
 position = Vector2(10, 253)
 
@@ -547,7 +550,7 @@ position = Vector2(4105, 642)
 texture = ExtResource("1_d21ai")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1531656092]
-position = Vector2(136, -27)
+position = Vector2(13666, -27)
 up_direction = Vector2(0.02998651, -0.99955034)
 script = ExtResource("1_epypp")
 metadata/_edit_group_ = true
@@ -569,7 +572,7 @@ one_shot = true
 script = ExtResource("3_q6r6c")
 
 [node name="Dash_cooldown_time" type="Timer" parent="Player" unique_id=500258493]
-wait_time = 0.1
+wait_time = 6.6000000000000005
 one_shot = true
 script = ExtResource("4_kdubu")
 
@@ -613,8 +616,18 @@ autoplay = true
 
 [node name="collectables" type="Node2D" parent="." unique_id=1438666834]
 
+[node name="Portal_level1" type="Area2D" parent="." unique_id=1257493168]
+position = Vector2(14753, -95)
+scale = Vector2(3, 3)
+script = ExtResource("11_hqns4")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_level1" unique_id=202587890]
+shape = SubResource("RectangleShape2D_x0ka3")
+
 [connection signal="tree_entered" from="Player" to="Player" method="_on_tree_entered"]
 [connection signal="timeout" from="Player/Dash_effect_time" to="Player" method="_on_dash_effect_time_timeout"]
 [connection signal="timeout" from="Player/Dash_cooldown_time" to="Player" method="_on_dash_cooldown_time_timeout"]
 [connection signal="body_entered" from="Checkpoints/Checkpoint1" to="Checkpoints/Checkpoint1" method="_on_body_entered"]
 [connection signal="body_entered" from="Checkpoints/Checkpoint2" to="Checkpoints/Checkpoint2" method="_on_body_entered"]
+[connection signal="body_entered" from="Portal_level1" to="Portal_level1" method="_on_body_entered"]

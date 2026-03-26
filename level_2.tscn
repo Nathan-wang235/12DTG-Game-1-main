@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://b16cmc86ys7qa"]
 
 [ext_resource type="Texture2D" uid="uid://btgox44mvlb1r" path="res://8bit-pixel-graphic-blue-sky-background-with-clouds-vector.jpg" id="1_7dov7"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Characters/icon.svg" id="1_nmjpi"]
 [ext_resource type="Script" uid="uid://bf6f3gy0cfnqw" path="res://player_level_2.gd" id="1_xdadj"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_xdadj"]
+[ext_resource type="Texture2D" uid="uid://cs1g8vtyvp4mc" path="res://kenney 2/Tilemap/Untitled.png" id="3_7dov7"]
 [ext_resource type="AudioStream" uid="uid://8rtlak62j6ok" path="res://Music/Jumpsound.mp3" id="3_7j8ne"]
 [ext_resource type="Script" uid="uid://dixefkqhc3o6j" path="res://cp_2_1.gd" id="4_1y8me"]
 [ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="5_n7ypv"]
@@ -633,14 +633,14 @@ position = Vector2(4111, -1199)
 texture = ExtResource("1_7dov7")
 
 [node name="Player2" type="CharacterBody2D" parent="." unique_id=1050817989]
-position = Vector2(519, 388)
+position = Vector2(518, 361)
 script = ExtResource("1_xdadj")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Player2" unique_id=1830258827]
-position = Vector2(-23.5, 24.5)
-scale = Vector2(0.6328125, 0.6171875)
-texture = ExtResource("1_nmjpi")
+position = Vector2(-24.500029, 24.000025)
+scale = Vector2(0.41847825, 0.4457832)
+texture = ExtResource("3_7dov7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2" unique_id=1999336029]
 position = Vector2(-24.5, 23.5)
