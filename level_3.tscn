@@ -4,11 +4,19 @@
 [ext_resource type="Script" uid="uid://fb1qdloaotr2" path="res://player_level_3.gd" id="1_16pka"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_16pka"]
 [ext_resource type="PackedScene" uid="uid://cqemhawlf1vsi" path="res://rock_level_3.tscn" id="4_j8bo8"]
-[ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="5_6p2dc"]
+[ext_resource type="PackedScene" uid="uid://dx1jy6udh44xa" path="res://obs1_level3.tscn" id="5_6p2dc"]
 [ext_resource type="PackedScene" uid="uid://cgpkhlsq5ek5s" path="res://机关🫠_level_3.tscn" id="7_7ds5r"]
-[ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://area_2d.tscn" id="8_7ds5r"]
-[ext_resource type="Texture2D" uid="uid://bwehvyc5lhi86" path="res://obstacle_level3.png" id="8_liaj6"]
-[ext_resource type="AudioStream" uid="uid://dhe18ai7nyonl" path="res://background music.mp3" id="9_liaj6"]
+
+[ext_resource type="Texture2D" uid="uid://cuhjf0krgpksl" path="res://kenney 2/obstacle_level3.png" id="7_fmu3g"]
+[ext_resource type="Script" uid="uid://dv62kgm044fe8" path="res://elv2_level_3.gd" id="8_833wy"]
+[ext_resource type="Script" uid="uid://cafpfs886y5si" path="res://elv3_level_3.gd" id="9_ghrvs"]
+[ext_resource type="Script" uid="uid://cfl5rfb22pppo" path="res://elv4_level_3.gd" id="10_jvy75"]
+[ext_resource type="Script" uid="uid://bf05n04s3ss4i" path="res://elv5_level_3.gd" id="11_g0tlw"]
+[ext_resource type="Script" uid="uid://o5fjc4313f2c" path="res://elv6_level_3.gd" id="12_keufu"]
+[ext_resource type="Script" uid="uid://cb228xngu43ea" path="res://elevator_1_level_3.gd" id="13_jvy75"]
+[ext_resource type="Texture2D" uid="uid://dff7dv6gjxyxs" path="res://kenney 2/obstacle2_level3.png" id="14_g0tlw"]
+[ext_resource type="Script" uid="uid://qnk8x8si10y5" path="res://path_follow_2d.gd" id="14_keufu"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8bo8"]
 size = Vector2(61, 61)
@@ -401,26 +409,23 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1jdk1")
 
-[sub_resource type="Curve2D" id="Curve2D_6p2dc"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 256.49072, -333.38025, 0, 0, 0, 0, 256.2422, 219.90173, 0, 0, 0, 0, 250.7583, -274.9218, 0, 0, 0, 0, 256, -334)
-}
-point_count = 4
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmu3g"]
-size = Vector2(128, 47)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b60u5"]
 size = Vector2(121, 212.5)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ds5r"]
-radius = 60.0
-height = 124.0
+[sub_resource type="Curve2D" id="Curve2D_keufu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -531, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, -3, -530, 0, 0, 0, 0, -2, -529)
+}
+point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_joegk"]
+size = Vector2(92, 20)
+
 
 [node name="level 3" type="Node2D" unique_id=1653356197]
 
 [node name="Player_level3" type="CharacterBody2D" parent="." unique_id=1049333804]
-position = Vector2(2020, -71)
+position = Vector2(5423, -709)
 script = ExtResource("1_16pka")
 rock_scene = ExtResource("4_j8bo8")
 metadata/_edit_group_ = true
@@ -441,28 +446,13 @@ zoom = Vector2(0.9, 0.9)
 position = Vector2(6, 32)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=738245249]
+
 tile_map_data = PackedByteArray("AAD8/wEAAAAEAAsAAAD9/wEAAAADAAsAAAD+/wEAAAADAAsAAAD//wEAAAADAAsAAAAAAAEAAAADAAsAAAABAAEAAAADAAsAAAACAAEAAAADAAsAAAADAAEAAAADAAsAAAAEAAEAAAAFAAsAAAD8/wIAAAABAAsAAAD8/wMAAAABAAsAAAD8/wQAAAABAAsAAAAEAAIAAAACAAsAAAAEAAMAAAACAAsAAAAEAAQAAAACAAsAAAD9/wIAAAAAAAsAAAD+/wIAAAAAAAsAAAD//wIAAAAAAAsAAAAAAAIAAAAAAAsAAAABAAIAAAAAAAsAAAACAAIAAAAAAAsAAAADAAIAAAAAAAsAAAADAAMAAAAAAAsAAAACAAMAAAAAAAsAAAABAAMAAAAAAAsAAAAAAAMAAAAAAAsAAAD//wMAAAAAAAsAAAD+/wMAAAAAAAsAAAD9/wMAAAAAAAsAAAD9/wQAAAAAAAsAAAD+/wQAAAAAAAsAAAD//wQAAAAAAAsAAAAAAAQAAAAAAAsAAAABAAQAAAAAAAsAAAACAAQAAAAAAAsAAAADAAQAAAAAAAsAAAAIAAEAAAANAAsAAAAJAAEAAAAOAAsAAAANAAEAAAANAAsAAAAOAAEAAAAOAAsAAAASAAEAAAANAAsAAAATAAEAAAAOAAsAAAAWAAAAAAANAAsAAAAXAAAAAAAOAAsAAAAaAAAAAAAEAAsAAAAbAAAAAAADAAsAAAAcAAAAAAADAAsAAAAdAAAAAAADAAsAAAAeAAAAAAADAAsAAAAfAAAAAAADAAsAAAAgAAAAAAAFAAsAAAAkAP3/AAAEAAsAAAAlAP3/AAAFAAsAAAAjAP3/AAACABEAAAAqAP//AAAIAAsAAAArAP//AAAJAAsAAAAsAP//AAAKAAsAAAAxAP//AAAIAAsAAAAyAP//AAAJAAsAAAAzAP//AAAKAAsAAAA3AP//AAAIAAsAAAA4AP//AAAJAAsAAAA5AP//AAAKAAsAAAA8AP7/AAAIAAsAAAA9AP7/AAAJAAsAAAA+AP7/AAAKAAsAAABJAP7/AAANAAsAAABKAP7/AAAMAAsAAABLAP7/AAAOAAsAAABKAP3/AAABABEAAABJAPb/AAANAAsAAABKAPb/AAAOAAsAAABOAPb/AAANAAsAAABPAPb/AAAOAAsAAABTAPb/AAANAAsAAABUAPb/AAAOAAsAAABdAPL/AAAHABAAAABeAPL/AAAIABAAAABcAPL/AAABABEAAABYAPb/AAANAAsAAABZAPb/AAAMAAsAAABaAPb/AAAMAAsAAABbAPb/AAAOAAsAAABkAPL/AAABABEAAABlAPL/AAAHABAAAABmAPL/AAAIABAAAABsAPL/AAABABEAAABtAPL/AAAHABAAAABuAPL/AAAIABAAAABxAPb/AAANAAsAAAByAPb/AAAOAAsAAAB2APb/AAANAAsAAAB3APb/AAAOAAsAAAB7APb/AAAEAAsAAAB8APb/AAADAAsAAAB9APb/AAADAAsAAAB+APb/AAADAAsAAAB/APb/AAADAAsAAACAAPb/AAADAAsAAACBAPb/AAADAAsAAACCAPb/AAADAAsAAACDAPb/AAADAAsAAACEAPb/AAAFAAsAAAB7APf/AAABAAsAAAB7APr/AAABAAsAAAB7APv/AAABAAsAAACEAPf/AAACAAsAAACEAPj/AAACAAsAAACEAPn/AAACAAsAAACEAPr/AAACAAsAAACEAPv/AAACAAsAAAB8APf/AAAAAAsAAAB9APf/AAAAAAsAAAB+APf/AAAAAAsAAAB/APf/AAAAAAsAAACAAPf/AAAAAAsAAACBAPf/AAAAAAsAAACCAPf/AAAAAAsAAACDAPf/AAAAAAsAAACDAPj/AAAAAAsAAACCAPj/AAAAAAsAAACBAPj/AAAAAAsAAACAAPj/AAAAAAsAAAB/APj/AAAAAAsAAAB+APj/AAAAAAsAAAB9APj/AAAAAAsAAAB8APj/AAAAAAsAAAB9APn/AAAAAAsAAAB+APn/AAAAAAsAAAB/APn/AAAAAAsAAACAAPn/AAAAAAsAAACBAPn/AAAAAAsAAACCAPn/AAAAAAsAAACDAPn/AAAAAAsAAACDAPr/AAAAAAsAAACCAPr/AAAAAAsAAACBAPr/AAAAAAsAAACAAPr/AAAAAAsAAAB/APr/AAAAAAsAAAB+APr/AAAAAAsAAAB9APr/AAAAAAsAAAB8APr/AAAAAAsAAAB8APv/AAAAAAsAAAB9APv/AAAAAAsAAAB+APv/AAAAAAsAAAB/APv/AAAAAAsAAACAAPv/AAAAAAsAAACBAPv/AAAAAAsAAACCAPv/AAAAAAsAAACDAPv/AAAAAAsAAAB7APj/AAABAAsAAAB7APn/AAABAAsAAAB8APn/AAAAAAsAAACKAPP/AAAHABAAAACLAPP/AAAIABAAAACJAPP/AAABABEAAACGAPb/AAANAAsAAACHAPb/AAAOAAsAAACOAPb/AAANAAsAAACPAPb/AAAOAAsAAACSAPf/AAANAAsAAACTAPf/AAAOAAsAAACWAPn/AAANAAsAAACXAPn/AAAOAAsAAACZAPr/AAANAAsAAACaAPr/AAAOAAsAAACcAPn/AAANAAsAAACdAPn/AAAOAAsAAACfAPj/AAANAAsAAACgAPj/AAAOAAsAAACiAPf/AAANAAsAAACjAPf/AAAOAAsAAAClAPb/AAANAAsAAACmAPb/AAAOAAsAAACqAPP/AAAHABAAAACrAPP/AAAIABAAAACpAPP/AAABABEAAACvAPb/AAAEAAsAAACwAPb/AAADAAsAAACxAPb/AAADAAsAAACyAPb/AAADAAsAAACzAPb/AAADAAsAAAC0APb/AAADAAsAAAC1APb/AAAFAAsAAACvAPf/AAABAAsAAACvAPj/AAABAAsAAACvAPn/AAABAAsAAACvAPr/AAABAAsAAAC1APf/AAACAAsAAAC1APj/AAACAAsAAAC1APn/AAACAAsAAAC1APr/AAACAAsAAACwAPf/AAAAAAsAAACxAPf/AAAAAAsAAACyAPf/AAAAAAsAAACzAPf/AAAAAAsAAAC0APf/AAAAAAsAAAC0APj/AAAAAAsAAACzAPj/AAAAAAsAAACyAPj/AAAAAAsAAACxAPj/AAAAAAsAAACwAPj/AAAAAAsAAACwAPn/AAAAAAsAAACxAPn/AAAAAAsAAACyAPn/AAAAAAsAAACzAPn/AAAAAAsAAAC0APn/AAAAAAsAAACyAPr/AAAAAAsAAACxAPr/AAAAAAsAAACwAPr/AAAAAAsAAACzAPr/AAAAAAsAAAC0APr/AAAAAAsAAAC1APX/AAAHABEAAACyAPX/AAAOAAYAAAB/APX/AAAQAAYAAABZAPX/AAAQAAYAAAA4AP7/AAAQAAYAAAAcAP//AAAQAAYAAAAkAAEAAAANAAsAAAAlAAEAAAAOAAsAAAAnAAAAAAANAAsAAAAoAAAAAAAOAAsAAAABAAAAAAAQAAYAAAAeAP//AAABAAMAAAAyAP7/AAABAAMAAABaAPX/AAABAAMAAACDAPX/AAABAAMAAAA=")
+
 tile_set = SubResource("TileSet_6p2dc")
 
 [node name="rock_level3" parent="." unique_id=611775948 instance=ExtResource("4_j8bo8")]
 position = Vector2(198, 47)
-
-[node name="Area2D" type="Area2D" parent="." unique_id=501944883]
-position = Vector2(4605, -458)
-script = ExtResource("5_6p2dc")
-metadata/_edit_group_ = true
-
-[node name="Path2D" type="Path2D" parent="Area2D" unique_id=915470372]
-rotation = 3.1415927
-curve = SubResource("Curve2D_6p2dc")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Area2D/Path2D" unique_id=1912819696]
-position = Vector2(256.49072, -333.38025)
-rotation = 1.5712456
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=35998788]
-position = Vector2(-263, 354)
-shape = SubResource("RectangleShape2D_fmu3g")
 
 [node name="trigger_level3" parent="." unique_id=1614180312 node_paths=PackedStringArray("wall_node") instance=ExtResource("7_7ds5r")]
 position = Vector2(2275, -158)
@@ -475,55 +465,87 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Wall_level3" unique_id=1179233709]
 position = Vector2(2368, -21.999992)
 scale = Vector2(0.8197294, 0.91558444)
-texture = ExtResource("8_liaj6")
+texture = ExtResource("7_fmu3g")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall_level3" unique_id=1569750791]
 position = Vector2(2367.4998, -22.25)
 scale = Vector2(1.06, 1.06)
 shape = SubResource("RectangleShape2D_b60u5")
 
-[node name="Area2D2" parent="." unique_id=638974961 instance=ExtResource("8_7ds5r")]
-position = Vector2(1910, 251)
 
-[node name="checkpoint" type="Node2D" parent="." unique_id=1700376737]
+[node name="Triggers and elevators" type="Node2D" parent="." unique_id=1533129397]
 
-[node name="CP1-1" type="Area2D" parent="checkpoint" unique_id=1230634668]
-position = Vector2(1944, -53)
-script = ExtResource("5_6p2dc")
+[node name="elv2_level3" parent="Triggers and elevators" unique_id=343239142 instance=ExtResource("5_6p2dc")]
+position = Vector2(6363, -1225)
+script = ExtResource("8_833wy")
+elv2_level3_speed = 0
+
+[node name="elv3_level3" parent="Triggers and elevators" unique_id=1167382293 instance=ExtResource("5_6p2dc")]
+position = Vector2(6868, -1217)
+script = ExtResource("9_ghrvs")
+elv3_level3_speed = 0
+
+[node name="elv4_level3" parent="Triggers and elevators" unique_id=1311568470 instance=ExtResource("5_6p2dc")]
+position = Vector2(7374, -1226)
+script = ExtResource("10_jvy75")
+elv4_level3_speed = 0
+
+[node name="elv5_level3" parent="Triggers and elevators" unique_id=747373364 instance=ExtResource("5_6p2dc")]
+position = Vector2(9152, -1117)
+script = ExtResource("11_g0tlw")
+elv5_level3_speed = 0
+
+[node name="elv6_level3" parent="Triggers and elevators" unique_id=1950393435 instance=ExtResource("5_6p2dc")]
+position = Vector2(11201, -1119)
+script = ExtResource("12_keufu")
+elv6_level3_speed = 0
+
+[node name="trigger2_level3" parent="Triggers and elevators" unique_id=1718227523 node_paths=PackedStringArray("elevator_1") instance=ExtResource("7_7ds5r")]
+position = Vector2(4770, -161)
+elevator_1 = NodePath("../elv1_level3")
+
+[node name="trigger3_level3" parent="Triggers and elevators" unique_id=1078576731 node_paths=PackedStringArray("elevator_2") instance=ExtResource("7_7ds5r")]
+position = Vector2(5857, -859)
+elevator_2 = NodePath("../elv2_level3")
+
+[node name="trigger4_level3" parent="Triggers and elevators" unique_id=845809447 node_paths=PackedStringArray("wall_node", "elevator_3") instance=ExtResource("7_7ds5r")]
+position = Vector2(6369, -856)
+wall_node = NodePath("../../Wall_level3")
+elevator_3 = NodePath("../elv3_level3")
+
+[node name="trigge5_level3" parent="Triggers and elevators" unique_id=1756004786 node_paths=PackedStringArray("wall_node", "elevator_4") instance=ExtResource("7_7ds5r")]
+position = Vector2(6881, -864)
+wall_node = NodePath("../../Wall_level3")
+elevator_4 = NodePath("../elv4_level3")
+
+[node name="trigger6_level3" parent="Triggers and elevators" unique_id=823665873 node_paths=PackedStringArray("wall_node", "elevator_5") instance=ExtResource("7_7ds5r")]
+position = Vector2(8800, -800)
+wall_node = NodePath("../../Wall_level3")
+elevator_5 = NodePath("../elv5_level3")
+
+[node name="trigger7_level3" parent="Triggers and elevators" unique_id=1487651545 node_paths=PackedStringArray("wall_node", "elevator_6") instance=ExtResource("7_7ds5r")]
+position = Vector2(10844, -804)
+wall_node = NodePath("../../Wall_level3")
+elevator_6 = NodePath("../elv6_level3")
+
+[node name="elv1_level3" type="Area2D" parent="Triggers and elevators" unique_id=894308471]
+position = Vector2(4211, -101)
+script = ExtResource("13_jvy75")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint/CP1-1" unique_id=1379961106]
-shape = SubResource("CapsuleShape2D_7ds5r")
+[node name="Path2D" type="Path2D" parent="Triggers and elevators/elv1_level3" unique_id=605019228]
+curve = SubResource("Curve2D_keufu")
 
-[node name="CP1-2" type="Area2D" parent="checkpoint" unique_id=565745060]
-position = Vector2(3239, -113)
-script = ExtResource("5_6p2dc")
-metadata/_edit_group_ = true
+[node name="PathFollow2D" type="PathFollow2D" parent="Triggers and elevators/elv1_level3/Path2D" unique_id=341284918]
+rotation = -1.5764459
+script = ExtResource("14_keufu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint/CP1-2" unique_id=1119855175]
-shape = SubResource("CapsuleShape2D_7ds5r")
+[node name="StaticBody2D" type="StaticBody2D" parent="Triggers and elevators/elv1_level3/Path2D/PathFollow2D" unique_id=1922110957]
 
-[node name="CP1-3" type="Area2D" parent="checkpoint" unique_id=134859442]
-position = Vector2(5799, -683)
-script = ExtResource("5_6p2dc")
-metadata/_edit_group_ = true
+[node name="Sprite2D" type="Sprite2D" parent="Triggers and elevators/elv1_level3/Path2D/PathFollow2D/StaticBody2D" unique_id=1889471614]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_g0tlw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint/CP1-3" unique_id=610910306]
-shape = SubResource("CapsuleShape2D_7ds5r")
-
-[node name="CP1-4" type="Area2D" parent="checkpoint" unique_id=1638996662]
-position = Vector2(8415, -679)
-script = ExtResource("5_6p2dc")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint/CP1-4" unique_id=1630770255]
-shape = SubResource("CapsuleShape2D_7ds5r")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=685968327]
-stream = ExtResource("9_liaj6")
-autoplay = true
-
-[connection signal="body_entered" from="checkpoint/CP1-1" to="checkpoint/CP1-1" method="_on_body_entered"]
-[connection signal="body_entered" from="checkpoint/CP1-2" to="checkpoint/CP1-2" method="_on_body_entered"]
-[connection signal="body_entered" from="checkpoint/CP1-3" to="checkpoint/CP1-3" method="_on_body_entered"]
-[connection signal="body_entered" from="checkpoint/CP1-4" to="checkpoint/CP1-4" method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers and elevators/elv1_level3/Path2D/PathFollow2D/StaticBody2D" unique_id=969511703]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_joegk")
