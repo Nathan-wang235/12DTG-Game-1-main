@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://fb1qdloaotr2" path="res://player_level_3.gd" id="1_16pka"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_16pka"]
+
 [ext_resource type="Texture2D" uid="uid://bca1npq6q2lmp" path="res://Characters/Idle.png" id="3_m8gss"]
 [ext_resource type="AudioStream" uid="uid://8rtlak62j6ok" path="res://Music/Jumpsound.mp3" id="4_b60u5"]
+
 [ext_resource type="PackedScene" uid="uid://cqemhawlf1vsi" path="res://rock_level_3.tscn" id="4_j8bo8"]
 [ext_resource type="Texture2D" uid="uid://cx2hb5kk1740w" path="res://Characters/Jump.png" id="4_wnq0t"]
 [ext_resource type="PackedScene" uid="uid://dx1jy6udh44xa" path="res://elevator.tscn" id="5_6p2dc"]
