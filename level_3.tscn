@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dhrlh58k2ijcx"]
 
 [ext_resource type="Script" uid="uid://fb1qdloaotr2" path="res://player_level_3.gd" id="1_16pka"]
+[ext_resource type="Texture2D" uid="uid://btgox44mvlb1r" path="res://8bit-pixel-graphic-blue-sky-background-with-clouds-vector.jpg" id="1_ra6nl"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_16pka"]
 [ext_resource type="Texture2D" uid="uid://bca1npq6q2lmp" path="res://Characters/Idle.png" id="3_m8gss"]
 [ext_resource type="AudioStream" uid="uid://8rtlak62j6ok" path="res://Music/Jumpsound.mp3" id="4_b60u5"]
@@ -706,6 +707,40 @@ radius = 60.0
 height = 124.0
 
 [node name="level 3" type="Node2D" unique_id=1653356197]
+
+[node name="Background" type="Node2D" parent="." unique_id=1859904719]
+position = Vector2(0, -1)
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=897227706]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-17, 0)
+repeat_times = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D" unique_id=404814196]
+texture_filter = 1
+position = Vector2(4105, -313)
+texture = ExtResource("1_ra6nl")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Background" unique_id=50600101]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-17, 0)
+repeat_times = 11
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1633637519]
+texture_filter = 1
+position = Vector2(4105, 642)
+texture = ExtResource("1_ra6nl")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Background" unique_id=672201552]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-17, 0)
+repeat_times = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D3" unique_id=509923022]
+texture_filter = 1
+position = Vector2(4111, -1199)
+texture = ExtResource("1_ra6nl")
 
 [node name="Player3" type="CharacterBody2D" parent="." unique_id=1049333804]
 position = Vector2(-30, 4)
