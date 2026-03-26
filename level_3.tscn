@@ -422,7 +422,7 @@ size = Vector2(92, 20)
 [node name="level 3" type="Node2D" unique_id=1653356197]
 
 [node name="Player_level3" type="CharacterBody2D" parent="." unique_id=1049333804]
-position = Vector2(5423, -709)
+position = Vector2(-48, -31)
 script = ExtResource("1_16pka")
 rock_scene = ExtResource("4_j8bo8")
 metadata/_edit_group_ = true
