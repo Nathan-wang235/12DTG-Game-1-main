@@ -1,12 +1,13 @@
 [gd_scene format=4 uid="uid://b16cmc86ys7qa"]
 
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_nmjpi"]
+[ext_resource type="Texture2D" uid="uid://btgox44mvlb1r" path="res://8bit-pixel-graphic-blue-sky-background-with-clouds-vector.jpg" id="1_7dov7"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Characters/icon.svg" id="1_nmjpi"]
 [ext_resource type="Script" uid="uid://bf6f3gy0cfnqw" path="res://player_level_2.gd" id="1_xdadj"]
 [ext_resource type="Texture2D" uid="uid://httoncq5l2pp" path="res://spritesheet-tiles-default.png" id="2_xdadj"]
-[ext_resource type="AudioStream" uid="uid://8rtlak62j6ok" path="res://Jumpsound.mp3" id="3_7j8ne"]
+[ext_resource type="AudioStream" uid="uid://8rtlak62j6ok" path="res://Music/Jumpsound.mp3" id="3_7j8ne"]
 [ext_resource type="Script" uid="uid://dixefkqhc3o6j" path="res://cp_2_1.gd" id="4_1y8me"]
 [ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="5_n7ypv"]
-[ext_resource type="AudioStream" uid="uid://dhe18ai7nyonl" path="res://background music.mp3" id="6_0s5r2"]
+[ext_resource type="AudioStream" uid="uid://dhe18ai7nyonl" path="res://Music/background music.mp3" id="6_0s5r2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1y8me"]
 size = Vector2(77, 77)
@@ -598,24 +599,47 @@ height = 124.0
 
 [node name="Level 2" type="Node2D" unique_id=1501462633]
 
-[node name="Player_level2" type="CharacterBody2D" parent="." unique_id=1050817989]
+[node name="Background" type="Node2D" parent="." unique_id=28828971]
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=281616890]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-17, 0)
+repeat_times = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D" unique_id=749148705]
+texture_filter = 1
+position = Vector2(4105, -313)
+texture = ExtResource("1_7dov7")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Background" unique_id=298847299]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-17, 0)
+repeat_times = 11
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D2" unique_id=2147319563]
+texture_filter = 1
+position = Vector2(4105, 642)
+texture = ExtResource("1_7dov7")
+
+[node name="Player2" type="CharacterBody2D" parent="." unique_id=1050817989]
 position = Vector2(519, 388)
 script = ExtResource("1_xdadj")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Player_level2" unique_id=1830258827]
+[node name="Sprite2D" type="Sprite2D" parent="Player2" unique_id=1830258827]
 position = Vector2(-23.5, 24.5)
 scale = Vector2(0.6328125, 0.6171875)
 texture = ExtResource("1_nmjpi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_level2" unique_id=1999336029]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2" unique_id=1999336029]
 position = Vector2(-24.5, 23.5)
 shape = SubResource("RectangleShape2D_1y8me")
 
-[node name="Camera2D" type="Camera2D" parent="Player_level2" unique_id=2020705720]
+[node name="Camera2D" type="Camera2D" parent="Player2" unique_id=2020705720]
 zoom = Vector2(0.9, 0.9)
 
-[node name="Jumpsound" type="AudioStreamPlayer" parent="Player_level2" unique_id=517579342]
+[node name="Jumpsound" type="AudioStreamPlayer" parent="Player2" unique_id=517579342]
 stream = ExtResource("3_7j8ne")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=952474223]
@@ -631,20 +655,20 @@ script = ExtResource("4_1y8me")
 position = Vector2(1755, 144)
 shape = SubResource("CircleShape2D_n7ypv")
 
-[node name="CP1-1" type="Area2D" parent="checkpoint" unique_id=558220823]
+[node name="CP3-2" type="Area2D" parent="checkpoint" unique_id=558220823]
 position = Vector2(3365, -90)
 script = ExtResource("5_n7ypv")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint/CP1-1" unique_id=1957085933]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint/CP3-2" unique_id=1957085933]
 shape = SubResource("CapsuleShape2D_0s5r2")
 
-[node name="CP1-2" type="Area2D" parent="checkpoint" unique_id=1275648834]
+[node name="CP3-3" type="Area2D" parent="checkpoint" unique_id=1275648834]
 position = Vector2(4182, -551)
 script = ExtResource("5_n7ypv")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint/CP1-2" unique_id=893583487]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint/CP3-3" unique_id=893583487]
 shape = SubResource("CapsuleShape2D_0s5r2")
 
 [node name="CP1-3" type="Area2D" parent="checkpoint" unique_id=559659018]
@@ -684,8 +708,8 @@ stream = ExtResource("6_0s5r2")
 autoplay = true
 
 [connection signal="body_entered" from="checkpoint/CP2-1" to="checkpoint/CP2-1" method="_on_body_entered"]
-[connection signal="body_entered" from="checkpoint/CP1-1" to="checkpoint/CP1-1" method="_on_body_entered"]
-[connection signal="body_entered" from="checkpoint/CP1-2" to="checkpoint/CP1-2" method="_on_body_entered"]
+[connection signal="body_entered" from="checkpoint/CP3-2" to="checkpoint/CP3-2" method="_on_body_entered"]
+[connection signal="body_entered" from="checkpoint/CP3-3" to="checkpoint/CP3-3" method="_on_body_entered"]
 [connection signal="body_entered" from="checkpoint/CP1-3" to="checkpoint/CP1-3" method="_on_body_entered"]
 [connection signal="body_entered" from="checkpoint/CP1-4" to="checkpoint/CP1-4" method="_on_body_entered"]
 [connection signal="body_entered" from="checkpoint/CP1-5" to="checkpoint/CP1-5" method="_on_body_entered"]

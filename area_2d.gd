@@ -1,14 +1,11 @@
 extends Area2D
 
 
-
-@onready var path_follow : PathFollow2D = $Path2D/PathFollow2D
-@export var elv1_level3_speed = 0
-
-
-
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	path_follow.progress += elv1_level3_speed * delta
+	pass
 
-func start():
-	elv1_level3_speed = 100
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == "Player" :
+		body.respawn = self.global_position

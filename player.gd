@@ -4,7 +4,7 @@ const JUMP_VELOCITY = -400.0
 @export var speed_multiplier: float = 5
 @onready var effect_timer = $Dash_effect_time
 @onready var cooldown_timer = $Dash_cooldown_time
-var respawn = Vector2(165, -28)
+var respawn = Vector2(242, -28)
 var is_active := false
 var is_on_cooldown := false
 func _physics_process(delta: float) -> void:
