@@ -16,8 +16,12 @@
 [ext_resource type="Script" path="res://elv5_level_3.gd" id="11_g0tlw"]
 [ext_resource type="Script" path="res://elv6_level_3.gd" id="12_keufu"]
 [ext_resource type="Script" path="res://elevator_1_level_3.gd" id="13_jvy75"]
+[ext_resource type="Script" uid="uid://bf05n04s3ss4i" path="res://elv5_level_3.gd" id="11_g0tlw"]
+[ext_resource type="Script" uid="uid://o5fjc4313f2c" path="res://elv6_level_3.gd" id="12_keufu"]
+[ext_resource type="Script" uid="uid://cb228xngu43ea" path="res://elevator_1_level_3.gd" id="13_jvy75"]
 [ext_resource type="Texture2D" uid="uid://dff7dv6gjxyxs" path="res://kenney 2/obstacle2_level3.png" id="14_g0tlw"]
 [ext_resource type="Script" path="res://path_follow_2d.gd" id="14_keufu"]
+[ext_resource type="Script" uid="uid://qnk8x8si10y5" path="res://path_follow_2d.gd" id="14_keufu"]
 [ext_resource type="AudioStream" uid="uid://dhe18ai7nyonl" path="res://Music/background music.mp3" id="17_joegk"]
 [ext_resource type="Script" uid="uid://xcowhf2i6s8y" path="res://cp_3_1new.gd" id="19_wnq0t"]
 
@@ -813,12 +817,16 @@ script = ExtResource("10_jvy75")
 elv4_level3_speed = 0
 
 [node name="elv5_level3" parent="Triggers and elevators" unique_id=747373364 instance=ExtResource("5_6p2dc")]
+
 position = Vector2(9012, -1416)
+position = Vector2(9202, -1129)
 script = ExtResource("11_g0tlw")
 elv5_level3_speed = 0
 
 [node name="elv6_level3" parent="Triggers and elevators" unique_id=1950393435 instance=ExtResource("5_6p2dc")]
+
 position = Vector2(10986, -1223)
+position = Vector2(11220, -1165)
 script = ExtResource("12_keufu")
 elv6_level3_speed = 0
 
