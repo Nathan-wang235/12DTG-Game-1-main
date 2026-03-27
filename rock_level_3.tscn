@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cqemhawlf1vsi"]
 
 [ext_resource type="Script" uid="uid://bxjb3hmwrqk1a" path="res://rock_level_3.gd" id="1_c880m"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Characters/icon.svg" id="1_pum8m"]
+[ext_resource type="Texture2D" uid="uid://dtnqbgx4eis7f" path="res://Items/IMG_9816 (1).png" id="2_c880m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q40fu"]
 
@@ -11,10 +11,10 @@ radius = 13.0
 [node name="rock_level3" type="RigidBody2D" unique_id=720103899]
 script = ExtResource("1_c880m")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=321168108]
-position = Vector2(9.536743e-07, 1.9073486e-06)
-scale = Vector2(0.13, 0.13)
-texture = ExtResource("1_pum8m")
+[node name="Img9816(1)" type="Sprite2D" parent="." unique_id=1955120702]
+position = Vector2(5.999999, 10)
+scale = Vector2(0.043344904, 0.04205247)
+texture = ExtResource("2_c880m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=601644600]
 shape = SubResource("CircleShape2D_q40fu")
