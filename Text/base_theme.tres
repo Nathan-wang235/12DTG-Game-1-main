@@ -1,0 +1,45 @@
+[gd_resource type="Theme" format=3 uid="uid://dq70o3fvp2wkc"]
+
+[ext_resource type="FontFile" uid="uid://q7uuhpp6feem" path="res://Text/plumppixel.ttf" id="1_xeys6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xeys6"]
+bg_color = Color(0.6, 0.92941177, 0.39607844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dbq0"]
+bg_color = Color(0.6, 1, 0.007843138, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hlyw"]
+bg_color = Color(0.6, 0.81960785, 0.21960784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxe87"]
+bg_color = Color(0.6, 0.9882353, 0.21176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lqsmc"]
+bg_color = Color(0.6, 1, 0.22745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb6ea"]
+bg_color = Color(0.6, 1, 0.12941177, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6swui"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4oxnn"]
+bg_color = Color(0.3010525, 1.2975465, 0.3851721, 0.35686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1togs"]
+bg_color = Color(0.6, 0.8627451, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drny7"]
+
+[resource]
+default_font = ExtResource("1_xeys6")
+Button/styles/disabled_mirrored = SubResource("StyleBoxFlat_xeys6")
+Button/styles/hover_mirrored = SubResource("StyleBoxFlat_4dbq0")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_3hlyw")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_rxe87")
+Button/styles/normal_mirrored = SubResource("StyleBoxFlat_lqsmc")
+Button/styles/pressed_mirrored = SubResource("StyleBoxFlat_yb6ea")
+OptionButton/styles/disabled = SubResource("StyleBoxFlat_6swui")
+Panel/styles/panel = SubResource("StyleBoxFlat_4oxnn")
+PanelContainer/styles/panel = null
+TabBar/styles/button_highlight = SubResource("StyleBoxFlat_1togs")
+TabBar/styles/tab_hovered = SubResource("StyleBoxFlat_drny7")

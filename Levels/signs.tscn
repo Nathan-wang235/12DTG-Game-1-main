@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c5y3frdgl1cpo"]
+
+[ext_resource type="Script" uid="uid://8jpsf547u75a" path="res://Levels/signs.gd" id="1_00e8w"]
+[ext_resource type="Texture2D" uid="uid://co85j7mgux5b5" path="res://IMG_9834.png" id="1_xcmsx"]
+
+[node name="Signs" type="Control" unique_id=1476335012]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 240.0
+offset_top = 219.0
+offset_right = 240.0
+offset_bottom = 219.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_00e8w")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=828746466]
+layout_mode = 0
+offset_left = -177.0
+offset_top = -214.0
+offset_right = 181.0
+offset_bottom = 63.0
+texture = ExtResource("1_xcmsx")
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect" unique_id=1612251772]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 63.0
+offset_right = 282.0
+offset_bottom = 178.0
+text = "Text:"

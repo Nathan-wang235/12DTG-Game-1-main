@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player" :
+	if body.name == "Player2" :
 		body.respawn = self.global_position

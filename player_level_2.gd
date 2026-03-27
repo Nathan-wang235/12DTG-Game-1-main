@@ -41,8 +41,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 		
-	if position.y >= 1000:
+	if position.y >= 701:
 		_respawn()
 
 func _respawn():
 	global_position = respawn
+
+
+func _on_pt_2_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

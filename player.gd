@@ -4,7 +4,7 @@ const JUMP_VELOCITY = -400.0
 @export var speed_multiplier: float = 5
 @onready var effect_timer = $Dash_effect_time
 @onready var cooldown_timer = $Dash_cooldown_time
-var respawn = Vector2(242, -28)
+var respawn = Vector2(24, -150) 
 var is_active := false
 var is_on_cooldown := false
 func _physics_process(delta: float) -> void:
@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	if position.y >= 1000:
+	if position.y >= 714:
 		_respawn()
 func _respawn():
 	global_position = respawn
@@ -53,3 +53,7 @@ func _on_dash_effect_time_timeout() -> void:
 	cooldown_timer.start()
 func _on_dash_cooldown_time_timeout() -> void:
 	is_on_cooldown = false
+
+
+func _on_sign_1_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	pass # Replace with function body.

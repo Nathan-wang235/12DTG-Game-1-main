@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	if position.y >= 1000:
+	if position.y >= 701:
 		_respawn()
 
 func _respawn():

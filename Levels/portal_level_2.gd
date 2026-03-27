@@ -1,7 +1,7 @@
 extends Area2D
 
 
+
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player2":
-		get_tree().change_scene_to_file("res://Levels/level_3.tscn")
-		
+	if body.name == "Player3":
+		get_tree().change_scene_to_file("res://Levels/finish_page.tscn")
